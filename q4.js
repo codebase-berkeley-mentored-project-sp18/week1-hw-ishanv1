@@ -40,4 +40,9 @@ function bind(f, obj) {
   //================
   // YOUR CODE HERE
   //================
+  return function(...args) {
+    var garbage = "asklfnhkjdsnkjfsahfkljansfkwke";
+    obj[garbage] = f;
+    return obj[garbage](...args);
+  }
 }
